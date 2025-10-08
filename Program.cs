@@ -2,27 +2,31 @@
 
 // Add services to the container.
 
+
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddOpenApi();
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSwaggerUi", policy =>
+    {
+        policy.WithOrigins("http://localhost:8081")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI(options =>
-    {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Orderly.Catalog API v1");
-        options.RoutePrefix = string.Empty; // делает Swagger доступным по адресу http://localhost:5000/
-    });
 
-    app.MapOpenApi();
-}
 
+app.UseCors("AllowSwaggerUi");
+
+app.UseSwagger();
+
+app.MapOpenApi();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

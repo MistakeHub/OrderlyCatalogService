@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  catalog:
+    build: .   # путь к проекту
+    container_name: orderly_catalog
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+
+  swagger-ui:
+    image: swaggerapi/swagger-ui:latest
+    container_name: orderly_swagger
+    ports:
+      - "8081:8080"  # Swagger UI будет доступен на http://localhost:8081
+    environment:
+      - SWAGGER_JSON_URL=http://localhost:8080/swagger/v1/swagger.json
+    depends_on:
+      - catalog
