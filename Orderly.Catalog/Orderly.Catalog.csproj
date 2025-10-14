@@ -6,7 +6,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>f3006a11-bde7-46f6-aa1e-c4725a67288e</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Orderly.Catalog.Application\Orderly.Catalog.Application.csproj" />
+    <ProjectReference Include="..\Orderly.Catalog.Domain\Orderly.Catalog.Domain.csproj" />
     <ProjectReference Include="..\Orderly.Catalog.Infrastructure\Orderly.Catalog.Infrastructure.csproj" />
   </ItemGroup>
 

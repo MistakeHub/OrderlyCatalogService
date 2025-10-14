@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Orderly.Catalog.Database;
+using Orderly.Catalog.Domain.Interfaces;
 using Orderly.Catalog.Entities;
 
 namespace Orderly.Catalog.Infrastructure.Implemintation
 {
-    internal class ProductRepository
+    public class ProductRepository:IProductRepository
     {
         private readonly CatalogDbContext _context;
 
@@ -28,10 +29,12 @@ namespace Orderly.Catalog.Infrastructure.Implemintation
             return await _context.Products.FindAsync(id);
         }
 
-        public async Task AddAsync(Product product)
+        public async Task<int> AddAsync(Product product)
         {
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
+            var newentity = await _context.Products.AsNoTracking().FirstOrDefaultAsync(x => x.SKU == product.SKU && product.VendorId == x.VendorId);
+            return newentity!.Id;
         }
 
         public async Task UpdateAsync(Product product)

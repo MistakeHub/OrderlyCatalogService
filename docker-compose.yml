@@ -2,7 +2,10 @@ version: "3.8"
 
 services:
   catalog:
-    build: .   # путь к проекту
+    build:
+     context: .
+     dockerfile: Orderly.Catalog/Dockerfile  
+     # путь к проекту
     container_name: orderly_catalog
     ports:
       - "8080:8080"
@@ -21,6 +24,7 @@ services:
       - SWAGGER_JSON_URL=http://localhost:8080/swagger/v1/swagger.json
     depends_on:
       - catalog
+      - db
       
   db:
     image: postgres:16

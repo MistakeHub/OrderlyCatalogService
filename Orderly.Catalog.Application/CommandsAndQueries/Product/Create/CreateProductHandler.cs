@@ -8,7 +8,7 @@ using Orderly.Catalog.Domain.Interfaces;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Product.Create
 {
-    internal class CreateProductHandler : IRequestHandler<CreateProduct>
+    internal class CreateProductHandler : IRequestHandler<CreateProduct, int>
     {
 
         public IProductRepository _productRepository;
@@ -18,9 +18,9 @@ namespace Orderly.Catalog.Application.CommandsAndQueries.Product.Create
             _productRepository = productRepository;
         }
 
-        public async Task Handle(CreateProduct request, CancellationToken cancellationToken)
+        public async Task<int> Handle(CreateProduct request, CancellationToken cancellationToken)
         {
-           await _productRepository.AddAsync(new Entities.Product { Name = request.Name, Price = request.Price }); 
+           return await _productRepository.AddAsync(new Entities.Product { Name = request.Name, Price = request.Price, VendorId = request.VendorId, Description = request.Description, SKU = request.SKU }); 
         }
     }
 }

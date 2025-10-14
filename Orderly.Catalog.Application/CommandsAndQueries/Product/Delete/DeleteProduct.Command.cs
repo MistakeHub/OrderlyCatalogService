@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Product.Delete
 {
-    internal class DeleteProduct:IRequest
+    public class DeleteProduct:IRequest
     {
         public int Id { get; set; }
     }

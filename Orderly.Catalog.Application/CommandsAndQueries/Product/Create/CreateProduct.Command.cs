@@ -7,10 +7,15 @@ using MediatR;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Product.Create
 {
-    internal class CreateProduct:IRequest
+    public class CreateProduct:IRequest<int>
     {
         public string Name { get; set; } = string.Empty;
 
         public decimal Price { get; set; }
+
+        public string Description { get; set; } = default!;
+
+        public string SKU { get; set; }
+        public int VendorId { get; set; }
     }
 }

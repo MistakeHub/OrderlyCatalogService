@@ -5,17 +5,20 @@ FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
-ENV ASPNETCORE_URLS=http://+:8080
+EXPOSE 8081
 
 
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Orderly.Catalog.csproj", "."]
-RUN dotnet restore "./Orderly.Catalog.csproj"
+COPY ["Orderly.Catalog/Orderly.Catalog.csproj", "Orderly.Catalog/"]
+COPY ["Orderly.Catalog.Application/Orderly.Catalog.Application.csproj", "Orderly.Catalog.Application/"]
+COPY ["Orderly.Catalog.Domain/Orderly.Catalog.Domain.csproj", "Orderly.Catalog.Domain/"]
+COPY ["Orderly.Catalog.Infrastructure/Orderly.Catalog.Infrastructure.csproj", "Orderly.Catalog.Infrastructure/"]
+RUN dotnet restore "./Orderly.Catalog/Orderly.Catalog.csproj"
 COPY . .
-WORKDIR "/src/."
+WORKDIR "/src/Orderly.Catalog"
 RUN dotnet build "./Orderly.Catalog.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage

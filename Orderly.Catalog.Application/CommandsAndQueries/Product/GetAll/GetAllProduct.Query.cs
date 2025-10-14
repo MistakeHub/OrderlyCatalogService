@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Product.GetAll
 {
-    internal class GetAllProduct:IRequest<IEnumerable<Entities.Product>>
+    public class GetAllProduct:IRequest<IEnumerable<Entities.Product>>
     {
     }
 }

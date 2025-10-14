@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Product.GetById
 {
-    internal class GetByIdProduct:IRequest<Entities.Product>
+    public class GetByIdProduct:IRequest<Entities.Product>
     {
         public int Id { get; set; }
     }
