@@ -8,7 +8,7 @@ using Orderly.Catalog.Domain.Interfaces;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Product.GetAll
 {
-    internal class GetAllProductHandler : IRequestHandler<GetAllProduct, IEnumerable<Entities.Product>>
+    public class GetAllProductHandler : IRequestHandler<GetAllProduct, IEnumerable<Domain.Entities.Product>>
     {
         public IProductRepository _productRepository;
 
@@ -16,7 +16,7 @@ namespace Orderly.Catalog.Application.CommandsAndQueries.Product.GetAll
         {
             _productRepository = productRepository;
         }
-        public async Task<IEnumerable<Entities.Product>> Handle(GetAllProduct request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<Domain.Entities.Product>> Handle(GetAllProduct request, CancellationToken cancellationToken)
         {
             return await _productRepository.GetAllAsync();
         }

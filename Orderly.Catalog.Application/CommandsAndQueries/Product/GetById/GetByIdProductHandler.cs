@@ -8,7 +8,7 @@ using Orderly.Catalog.Domain.Interfaces;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Product.GetById
 {
-    internal class GetByIdProductHandler : IRequestHandler<GetByIdProduct, Entities.Product>
+    internal class GetByIdProductHandler : IRequestHandler<GetByIdProduct, Domain.Entities.Product>
     {
         public IProductRepository _productRepository;
 
@@ -16,7 +16,7 @@ namespace Orderly.Catalog.Application.CommandsAndQueries.Product.GetById
         {
             _productRepository = productRepository;
         }
-        public async Task<Entities.Product> Handle(GetByIdProduct request, CancellationToken cancellationToken)
+        public async Task<Domain.Entities.Product> Handle(GetByIdProduct request, CancellationToken cancellationToken)
         {
             return await _productRepository.GetByIdAsync(request.Id);
         }

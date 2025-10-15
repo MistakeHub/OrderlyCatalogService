@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Orderly.Catalog.Domain.Entities;
-using Orderly.Catalog.Entities;
 
 namespace Orderly.Catalog.Database
 {
@@ -34,6 +33,11 @@ namespace Orderly.Catalog.Database
                 builder.HasKey(v => v.Id);
                 builder.Property(v => v.Id).ValueGeneratedOnAdd();
                 builder.HasIndex(v=> v.Name).IsUnique();
+
+                builder.HasMany(v => v.Products)
+                  .WithOne(p => p.Vendor)
+                  .HasForeignKey(p => p.VendorId)
+                  .OnDelete(DeleteBehavior.Restrict);
             });
         }
     }

@@ -1,6 +1,6 @@
 ﻿using Orderly.Catalog.Domain.Entities;
 
-namespace Orderly.Catalog.Entities
+namespace Orderly.Catalog.Domain.Entities
 {
     public class Product
     {

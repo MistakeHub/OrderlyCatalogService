@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Orderly.Catalog.Database;
 using Orderly.Catalog.Domain.Interfaces;
-using Orderly.Catalog.Entities;
+using Orderly.Catalog.Domain.Entities;
 
 namespace Orderly.Catalog.Infrastructure.Implemintation
 {

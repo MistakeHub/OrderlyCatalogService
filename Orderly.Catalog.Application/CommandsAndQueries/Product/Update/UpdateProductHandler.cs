@@ -18,7 +18,7 @@ namespace Orderly.Catalog.Application.CommandsAndQueries.Product.Update
         }
         public async Task Handle(UpdateProduct request, CancellationToken cancellationToken)
         {
-            await _productRepository.UpdateAsync(new Entities.Product() { Id = request.ProductId, Name = request.ProductName, Price = request.ProductPrice, Description = request.Description, SKU = request.SKU, VendorId = request.VendorId });
+            await _productRepository.UpdateAsync(new Domain.Entities.Product { Id = request.ProductId, Name = request.ProductName, Price = request.ProductPrice, Description = request.Description, SKU = request.SKU, VendorId = request.VendorId });
         }
     }
 }

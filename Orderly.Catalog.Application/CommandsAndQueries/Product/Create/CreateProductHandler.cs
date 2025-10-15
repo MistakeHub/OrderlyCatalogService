@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 using Orderly.Catalog.Domain.Interfaces;
+using Orderly.Catalog.Domain;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Product.Create
 {
-    internal class CreateProductHandler : IRequestHandler<CreateProduct, int>
+    public class CreateProductHandler : IRequestHandler<CreateProduct, int>
     {
 
         public IProductRepository _productRepository;
@@ -20,7 +21,7 @@ namespace Orderly.Catalog.Application.CommandsAndQueries.Product.Create
 
         public async Task<int> Handle(CreateProduct request, CancellationToken cancellationToken)
         {
-           return await _productRepository.AddAsync(new Entities.Product { Name = request.Name, Price = request.Price, VendorId = request.VendorId, Description = request.Description, SKU = request.SKU }); 
+           return await _productRepository.AddAsync(new Domain.Entities.Product { Name = request.Name, Price = request.Price, VendorId = request.VendorId, Description = request.Description, SKU = request.SKU }); 
         }
     }
 }

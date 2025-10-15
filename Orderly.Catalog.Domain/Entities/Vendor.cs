@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Orderly.Catalog.Entities;
+using Orderly.Catalog.Domain.Entities;
 
 namespace Orderly.Catalog.Domain.Entities
 {

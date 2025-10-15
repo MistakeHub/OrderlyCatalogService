@@ -26,6 +26,7 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IVendorRepository, VendorRepository>();
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())

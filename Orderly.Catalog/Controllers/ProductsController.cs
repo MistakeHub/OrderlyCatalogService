@@ -20,13 +20,13 @@ namespace Orderly.Catalog.Controllers
         public ProductsController(IMediator mediator) { _mediator = mediator; }
 
         [HttpGet("GetAll")]
-        public async Task<IEnumerable<Entities.Product>> TestDb()
+        public async Task<IEnumerable<Domain.Entities.Product>> TestDb()
         {
             return await _mediator.Send(new GetAllProduct());
         }
 
         [HttpGet("GetByid/{id}")]
-        public async Task<Entities.Product> GetById ([FromRoute] int id)
+        public async Task<Domain.Entities.Product> GetById ([FromRoute] int id)
         {
             return await _mediator.Send(new GetByIdProduct { Id = id });
         }
