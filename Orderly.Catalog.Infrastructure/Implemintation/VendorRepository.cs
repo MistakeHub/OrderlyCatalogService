@@ -26,7 +26,7 @@ namespace Orderly.Catalog.Infrastructure.Implemintation
 
         public async Task<Vendor?> GetByIdAsync(int id)
         {
-            return await _context.Vendors.FindAsync(id);
+            return await _context.Vendors.FirstOrDefaultAsync(x=> x.Id == id);
         }
 
         public async Task<int> AddAsync(Vendor vendor)

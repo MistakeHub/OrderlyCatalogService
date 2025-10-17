@@ -7,6 +7,7 @@ using Orderly.Catalog.Application.CommandsAndQueries.Product.Delete;
 using Orderly.Catalog.Application.CommandsAndQueries.Product.GetAll;
 using Orderly.Catalog.Application.CommandsAndQueries.Product.GetById;
 using Orderly.Catalog.Application.CommandsAndQueries.Product.Update;
+using Orderly.Catalog.Application.CommandsAndQueries.Product.ViewModels;
 using Orderly.Catalog.Database;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
@@ -20,7 +21,7 @@ namespace Orderly.Catalog.Controllers
         public ProductsController(IMediator mediator) { _mediator = mediator; }
 
         [HttpGet("GetAll")]
-        public async Task<IEnumerable<Domain.Entities.Product>> TestDb()
+        public async Task<IEnumerable<ProductViewModel>> TestDb()
         {
             return await _mediator.Send(new GetAllProduct());
         }

@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using MediatR;
+using Orderly.Catalog.Application.CommandsAndQueries.Product.ViewModels;
 using Orderly.Catalog.Domain.Interfaces;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Product.GetAll
 {
-    public class GetAllProductHandler : IRequestHandler<GetAllProduct, IEnumerable<Domain.Entities.Product>>
+    public class GetAllProductHandler : IRequestHandler<GetAllProduct, IEnumerable<ProductViewModel>>
     {
-        public IProductRepository _productRepository;
+        public readonly IProductRepository _productRepository;
+        public readonly IMapper _mapper;
 
-        public GetAllProductHandler(IProductRepository productRepository)
+        public GetAllProductHandler(IProductRepository productRepository, IMapper mapper)
         {
             _productRepository = productRepository;
+            _mapper = mapper;
         }
-        public async Task<IEnumerable<Domain.Entities.Product>> Handle(GetAllProduct request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<ProductViewModel>> Handle(GetAllProduct request, CancellationToken cancellationToken)
         {
-            return await _productRepository.GetAllAsync();
+            var products = await _productRepository.GetAllAsync();
+            return _mapper.Map<IEnumerable<ProductViewModel>>(products);
         }
     }
 }

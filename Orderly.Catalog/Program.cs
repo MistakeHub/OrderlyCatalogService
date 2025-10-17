@@ -1,20 +1,35 @@
 ﻿using System.Reflection;
+using AutoMapper;
+using FluentValidation;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Orderly.Catalog.Application.Common.Behaviors;
+using Orderly.Catalog.Application.Common.Mapping;
 using Orderly.Catalog.Database;
 using Orderly.Catalog.Domain.Interfaces;
 using Orderly.Catalog.Infrastructure.Implemintation;
+using Orderly.Catalog.Middlewars;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(Orderly.Catalog.Application.AssemblyMarker).Assembly));
+
+builder.Services.AddValidatorsFromAssembly(typeof(Orderly.Catalog.Application.AssemblyMarker).Assembly);
+
 builder.Services.AddDbContext<CatalogDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("CatalogDb")));
+
 builder.Services.AddControllers();
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddOpenApi();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSwaggerUi", policy =>
@@ -25,7 +40,19 @@ builder.Services.AddCors(options =>
     });
 });
 
+var mapperConfig = new MapperConfiguration(cfg =>
+{
+    cfg.AddProfile<MappingProfile>(); 
+}, new LoggerFactory());
+
+IMapper mapper = mapperConfig.CreateMapper();
+
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
+builder.Services.AddSingleton(mapper);
+
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
 builder.Services.AddScoped<IVendorRepository, VendorRepository>();
 var app = builder.Build();
 
@@ -53,6 +80,8 @@ app.UseSwagger();
 
 app.MapOpenApi();
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ExceptionMiddlewar>();
 
 app.UseAuthorization();
 
