@@ -3,15 +3,14 @@ version: "3.8"
 services:
   catalog:
     build:
-     context: .
-     dockerfile: Orderly.Catalog/Dockerfile  
-     # путь к проекту
+      context: .
+      dockerfile: Orderly.Catalog/Dockerfile  
     container_name: orderly_catalog
     ports:
       - "8080:8080"
     environment:
       - ASPNETCORE_URLS=http://+:8080
-      - ConnectionStrings__CatalogDb=Host=db;Database=orderly_catalog;Username=admin;Password=12345
+      - ConnectionStrings__CatalogDb=${CATALOG_DB_CONN}
     depends_on:
       - db
 
@@ -19,21 +18,21 @@ services:
     image: swaggerapi/swagger-ui:latest
     container_name: orderly_swagger
     ports:
-      - "8081:8080"  # Swagger UI будет доступен на http://localhost:8081
+      - "8081:8080" 
     environment:
       - SWAGGER_JSON_URL=http://localhost:8080/swagger/v1/swagger.json
     depends_on:
       - catalog
       - db
-      
+
   db:
     image: postgres:16
     container_name: orderly.postgres
     restart: unless-stopped
     environment:
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=12345
-      - POSTGRES_DB=orderly_catalog
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
     ports:
       - "5432:5432"
     volumes:

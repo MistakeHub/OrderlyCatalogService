@@ -81,7 +81,7 @@ app.UseSwagger();
 app.MapOpenApi();
 app.UseHttpsRedirection();
 
-app.UseMiddleware<ExceptionMiddlewar>();
+app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseAuthorization();
 
