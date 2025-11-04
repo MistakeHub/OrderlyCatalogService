@@ -10,10 +10,18 @@ using Orderly.Catalog.Database;
 using Orderly.Catalog.Domain.Interfaces;
 using Orderly.Catalog.Infrastructure.Implemintation;
 using Orderly.Catalog.Middlewars;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .CreateLogger();
+
+
+builder.Host.UseSerilog();
+
+
 builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(Orderly.Catalog.Application.AssemblyMarker).Assembly));
 
@@ -87,4 +95,16 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+try
+{
+    Log.Information("Starting Orderly.Catalog service...");
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Service terminated unexpectedly");
+}
+finally
+{
+    Log.CloseAndFlush();
+}
