@@ -13,25 +13,25 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace Orderly.Catalog.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
         private readonly IMediator _mediator;
         public ProductsController(IMediator mediator) { _mediator = mediator; }
 
-        [HttpGet("GetAll")]
+        [HttpGet]
         public async Task<IEnumerable<ProductViewModel>> TestDb()
         {
             return await _mediator.Send(new GetAllProduct());
         }
 
-        [HttpGet("GetByid/{id}")]
+        [HttpGet("{id}")]
         public async Task<Domain.Entities.Product> GetById ([FromRoute] int id)
         {
             return await _mediator.Send(new GetByIdProduct { Id = id });
         }
-        [HttpDelete("Remove/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Remove([FromRoute] int id)
         {
             await _mediator.Send(new DeleteProduct { Id = id });

@@ -14,25 +14,25 @@ using Orderly.Catalog.Application.CommandsAndQueries.Vendor.Update;
 
 namespace Orderly.Catalog.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class VendorsController : ControllerBase
     {
         private readonly IMediator _mediator;
         public VendorsController(IMediator mediator) { _mediator = mediator; }
         
-        [HttpGet("GetAll")]
+        [HttpGet]
         public async Task<IEnumerable<Domain.Entities.Vendor>> TestDb()
         {
             return await _mediator.Send(new GetAllVendor());
         }
 
-        [HttpGet("GetByid/{id}")]
+        [HttpGet("{id}")]
         public async Task<Domain.Entities.Vendor> GetById([FromRoute] int id)
         {
             return await _mediator.Send(new GetByIdVendor { Id = id });
         }
-        [HttpDelete("Remove/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Remove([FromRoute] int id)
         {
             await _mediator.Send(new DeleteVendor { Id = id });

@@ -8,7 +8,7 @@ using Orderly.Catalog.Domain.Interfaces;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Product.Delete
 {
-    internal class DeleteProductHandler : IRequestHandler<DeleteProduct>
+    public class DeleteProductHandler : IRequestHandler<DeleteProduct>
     {
         public IProductRepository _productRepository;
 

@@ -9,7 +9,7 @@ using Orderly.Catalog.Domain.Interfaces;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Vendor.Delete
 {
-    internal class DeleteVendorHandler:IRequestHandler<DeleteVendor>
+    public class DeleteVendorHandler:IRequestHandler<DeleteVendor>
     {
         public IVendorRepository _vendorRepository;
 

@@ -9,7 +9,7 @@ using Orderly.Catalog.Domain.Interfaces;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Vendor.Update
 {
-    internal class UpdateVendorHandler:IRequestHandler<UpdateVendor>
+    public class UpdateVendorHandler:IRequestHandler<UpdateVendor>
     {
         public IVendorRepository _vendorRepository;
 

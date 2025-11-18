@@ -9,7 +9,7 @@ using Orderly.Catalog.Domain.Interfaces;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Vendor.Create
 {
-    internal class CreateVendorHandler:IRequestHandler<CreateVendor, int>
+    public class CreateVendorHandler:IRequestHandler<CreateVendor, int>
     {
         public IVendorRepository _vendorRepository;
 

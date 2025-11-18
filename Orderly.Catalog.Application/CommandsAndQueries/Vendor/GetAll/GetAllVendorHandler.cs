@@ -9,7 +9,7 @@ using Orderly.Catalog.Domain.Interfaces;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Vendor.GetAll
 {
-    internal class GetAllVendorHandler:IRequestHandler<GetAllVendor, IEnumerable<Domain.Entities.Vendor>>
+    public class GetAllVendorHandler:IRequestHandler<GetAllVendor, IEnumerable<Domain.Entities.Vendor>>
     {
         public IVendorRepository _vendorRepository;
 

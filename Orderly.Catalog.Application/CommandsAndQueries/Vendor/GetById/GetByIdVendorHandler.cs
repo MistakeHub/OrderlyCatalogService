@@ -10,7 +10,7 @@ using Orderly.Catalog.Domain.Interfaces;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Vendor.GetById
 {
-    internal class GetByIdVendorHandler:IRequestHandler<GetByIdVendor, Domain.Entities.Vendor>
+    public class GetByIdVendorHandler:IRequestHandler<GetByIdVendor, Domain.Entities.Vendor>
     {
         public IVendorRepository _vendorRepository;
 

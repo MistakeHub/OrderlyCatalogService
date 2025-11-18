@@ -8,7 +8,7 @@ using Orderly.Catalog.Domain.Interfaces;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Product.GetById
 {
-    internal class GetByIdProductHandler : IRequestHandler<GetByIdProduct, Domain.Entities.Product>
+    public class GetByIdProductHandler : IRequestHandler<GetByIdProduct, Domain.Entities.Product>
     {
         public IProductRepository _productRepository;
 

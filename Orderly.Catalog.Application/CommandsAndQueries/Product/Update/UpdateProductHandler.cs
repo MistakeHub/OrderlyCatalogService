@@ -8,7 +8,7 @@ using Orderly.Catalog.Domain.Interfaces;
 
 namespace Orderly.Catalog.Application.CommandsAndQueries.Product.Update
 {
-    internal class UpdateProductHandler : IRequestHandler<UpdateProduct>
+    public class UpdateProductHandler : IRequestHandler<UpdateProduct>
     {
         public IProductRepository _productRepository;
 
