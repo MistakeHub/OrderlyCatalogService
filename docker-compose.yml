@@ -11,7 +11,8 @@ services:
     environment:
       - ASPNETCORE_URLS=http://+:8080
       - ConnectionStrings__CatalogDb=${CATALOG_DB_CONN}
-      - Serilog__MinimumLevel__Default=Debug
+    volumes:
+      - ./logs:/app/logs
     depends_on:
       - db
 

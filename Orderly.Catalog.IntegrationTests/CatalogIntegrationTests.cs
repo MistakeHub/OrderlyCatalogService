@@ -18,38 +18,49 @@ namespace Orderly.Catalog.IntegrationTests
 {
     public class CatalogIntegrationTests : IAsyncLifetime
     {
-        private readonly PostgreSqlContainer _postgresContainer;
+        private PostgreSqlContainer _postgresContainer;
         private WebApplicationFactory<Program>? _factory;
         private HttpClient? _client;
+        private string connectionString = string.Empty;
 
         public CatalogIntegrationTests()
         {
-            
-            _postgresContainer = new PostgreSqlBuilder()
-            .WithDatabase("testdb")
-            .WithUsername("postgres")
-            .WithPassword("postgres")
-            .WithImage("postgres:16") 
-            .WithCleanUp(true) 
-            .Build();
+
+         
                 
         }
 
   
         public async Task InitializeAsync()
         {
-      
-            await _postgresContainer.StartAsync();
+            if (Environment.GetEnvironmentVariable("CI") == "true")
+            {
+                connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__CatalogDb")!;
+            }
+            else
+            {
+                _postgresContainer = new PostgreSqlBuilder()
+                .WithDatabase("testdb")
+                .WithUsername("postgres")
+                .WithPassword("postgres")
+                .WithImage("postgres:16")
+                .WithCleanUp(true)
+                .Build();
+                connectionString = _postgresContainer.GetConnectionString();
+                await _postgresContainer.StartAsync();
+
+            }
+           
 
          
             _factory = new WebApplicationFactory<Program>().WithWebHostBuilder(builder =>
             {
                 builder.ConfigureAppConfiguration((context, conf) =>
                 {
-                    
+
                     var dict = new Dictionary<string, string>
                     {
-                        ["ConnectionStrings:CatalogDb"] = _postgresContainer.GetConnectionString()
+                        ["ConnectionStrings:CatalogDb"] = connectionString
                     };
                     conf.AddInMemoryCollection(dict);
                 });
