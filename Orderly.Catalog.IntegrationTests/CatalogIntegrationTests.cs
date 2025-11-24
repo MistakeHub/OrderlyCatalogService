@@ -33,68 +33,81 @@ namespace Orderly.Catalog.IntegrationTests
   
         public async Task InitializeAsync()
         {
-            if (Environment.GetEnvironmentVariable("CI") == "true")
+            try
             {
-                connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__CatalogDb")!;
-            }
-            else
-            {
-                _postgresContainer = new PostgreSqlBuilder()
-                .WithDatabase("testdb")
-                .WithUsername("postgres")
-                .WithPassword("postgres")
-                .WithImage("postgres:16")
-                .WithCleanUp(true)
-                .Build();
-                connectionString = _postgresContainer.GetConnectionString();
-                await _postgresContainer.StartAsync();
-
-            }
-           
-
-         
-            _factory = new WebApplicationFactory<Program>().WithWebHostBuilder(builder =>
-            {
-                builder.ConfigureAppConfiguration((context, conf) =>
+                if (Environment.GetEnvironmentVariable("CI") == "true")
                 {
+                    Console.WriteLine("CI is true");
+                    connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__CatalogDb")!;
+                }
+                else
+                {
+                    _postgresContainer = new PostgreSqlBuilder()
+                    .WithDatabase("testdb")
+                    .WithUsername("postgres")
+                    .WithPassword("postgres")
+                    .WithImage("postgres:16")
+                    .WithCleanUp(true)
+                    .Build();
 
-                    var dict = new Dictionary<string, string>
+                    await _postgresContainer.StartAsync();
+                    connectionString = _postgresContainer.GetConnectionString();
+
+                }
+
+
+
+                _factory = new WebApplicationFactory<Program>().WithWebHostBuilder(builder =>
+                {
+                    builder.ConfigureAppConfiguration((context, conf) =>
                     {
-                        ["ConnectionStrings:CatalogDb"] = connectionString
-                    };
-                    conf.AddInMemoryCollection(dict);
+
+                        var dict = new Dictionary<string, string>
+                        {
+                            ["ConnectionStrings:CatalogDb"] = connectionString
+                        };
+                        conf.AddInMemoryCollection(dict);
+                    });
+
+
+                    builder.UseEnvironment("Testing");
                 });
 
-               
-                builder.UseEnvironment("Testing");
-            });
 
-          
-            _client = _factory.CreateClient();
+                _client = _factory.CreateClient();
 
-          
-            using var scope = _factory.Services.CreateScope();
-            var services = scope.ServiceProvider;
-            var db = services.GetRequiredService<CatalogDbContext>();
 
-            db.Database.Migrate();
+                using var scope = _factory.Services.CreateScope();
+                var services = scope.ServiceProvider;
+                var db = services.GetRequiredService<CatalogDbContext>();
 
-     
-            if (!await db.Vendors.AnyAsync())
-            {
-                var vendor = new Domain.Entities.Vendor { Name = "TestVendor", WebSite = "https://example.com" };
-                
-                db.Vendors.Add(vendor);
-                var product = new Domain.Entities.Product
+                Console.WriteLine("Running migrations...");
+                db.Database.Migrate();
+                Console.WriteLine("Migrations complete.");
+
+
+                if (!await db.Vendors.AnyAsync())
                 {
-                    Name = "Test",
-                    Price = 100,
-                    Vendor = vendor,
-                    Description = "Desc",
-                    SKU = "SKU1"
-                };
-                db.Products.Add(product);
-                await db.SaveChangesAsync();
+                    var vendor = new Domain.Entities.Vendor { Name = "TestVendor", WebSite = "https://example.com" };
+
+                    db.Vendors.Add(vendor);
+                    var product = new Domain.Entities.Product
+                    {
+                        Name = "Test",
+                        Price = 100,
+                        Vendor = vendor,
+                        Description = "Desc",
+                        SKU = "SKU1"
+                    };
+                    db.Products.Add(product);
+                    await db.SaveChangesAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("ERROR IN InitializeAsync:");
+                Console.WriteLine(ex);
+                throw;
             }
         }
 
