@@ -18,72 +18,96 @@ namespace Orderly.Catalog.IntegrationTests
 {
     public class CatalogIntegrationTests : IAsyncLifetime
     {
-        private readonly PostgreSqlContainer _postgresContainer;
+        private PostgreSqlContainer _postgresContainer;
         private WebApplicationFactory<Program>? _factory;
         private HttpClient? _client;
+        private string connectionString = string.Empty;
 
         public CatalogIntegrationTests()
         {
-            
-            _postgresContainer = new PostgreSqlBuilder()
-            .WithDatabase("testdb")
-            .WithUsername("postgres")
-            .WithPassword("postgres")
-            .WithImage("postgres:16") 
-            .WithCleanUp(true) 
-            .Build();
+
+         
                 
         }
 
   
         public async Task InitializeAsync()
         {
-      
-            await _postgresContainer.StartAsync();
-
-         
-            _factory = new WebApplicationFactory<Program>().WithWebHostBuilder(builder =>
+            try
             {
-                builder.ConfigureAppConfiguration((context, conf) =>
+                if (Environment.GetEnvironmentVariable("CI") == "true")
                 {
-                    
-                    var dict = new Dictionary<string, string>
+                    Console.WriteLine("CI is true");
+                    connectionString = Environment.GetEnvironmentVariable("ConnectionStrings__CatalogDb")!;
+                }
+                else
+                {
+                    _postgresContainer = new PostgreSqlBuilder()
+                    .WithDatabase("testdb")
+                    .WithUsername("postgres")
+                    .WithPassword("postgres")
+                    .WithImage("postgres:16")
+                    .WithCleanUp(true)
+                    .Build();
+
+                    await _postgresContainer.StartAsync();
+                    connectionString = _postgresContainer.GetConnectionString();
+
+                }
+
+
+
+                _factory = new WebApplicationFactory<Program>().WithWebHostBuilder(builder =>
+                {
+                    builder.ConfigureAppConfiguration((context, conf) =>
                     {
-                        ["ConnectionStrings:CatalogDb"] = _postgresContainer.GetConnectionString()
-                    };
-                    conf.AddInMemoryCollection(dict);
+
+                        var dict = new Dictionary<string, string>
+                        {
+                            ["ConnectionStrings:CatalogDb"] = connectionString
+                        };
+                        conf.AddInMemoryCollection(dict);
+                    });
+
+
+                    builder.UseEnvironment("Testing");
                 });
 
-               
-                builder.UseEnvironment("Testing");
-            });
 
-          
-            _client = _factory.CreateClient();
+                _client = _factory.CreateClient();
 
-          
-            using var scope = _factory.Services.CreateScope();
-            var services = scope.ServiceProvider;
-            var db = services.GetRequiredService<CatalogDbContext>();
 
-            db.Database.Migrate();
+                using var scope = _factory.Services.CreateScope();
+                var services = scope.ServiceProvider;
+                var db = services.GetRequiredService<CatalogDbContext>();
 
-     
-            if (!await db.Vendors.AnyAsync())
-            {
-                var vendor = new Domain.Entities.Vendor { Name = "TestVendor", WebSite = "https://example.com" };
-                
-                db.Vendors.Add(vendor);
-                var product = new Domain.Entities.Product
+                Console.WriteLine("Running migrations...");
+                db.Database.Migrate();
+                Console.WriteLine("Migrations complete.");
+
+
+                if (!await db.Vendors.AnyAsync())
                 {
-                    Name = "Test",
-                    Price = 100,
-                    Vendor = vendor,
-                    Description = "Desc",
-                    SKU = "SKU1"
-                };
-                db.Products.Add(product);
-                await db.SaveChangesAsync();
+                    var vendor = new Domain.Entities.Vendor { Name = "TestVendor", WebSite = "https://example.com" };
+
+                    db.Vendors.Add(vendor);
+                    var product = new Domain.Entities.Product
+                    {
+                        Name = "Test",
+                        Price = 100,
+                        Vendor = vendor,
+                        Description = "Desc",
+                        SKU = "SKU1"
+                    };
+                    db.Products.Add(product);
+                    await db.SaveChangesAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("ERROR IN InitializeAsync:");
+                Console.WriteLine(ex);
+                throw;
             }
         }
 
@@ -92,8 +116,11 @@ namespace Orderly.Catalog.IntegrationTests
         {
             _client?.Dispose();
             _factory?.Dispose();
-            await _postgresContainer.StopAsync();
-            await _postgresContainer.DisposeAsync();
+            if (_postgresContainer != null)
+            {
+                await _postgresContainer.StopAsync();
+                await _postgresContainer.DisposeAsync();
+            }
         }
 
         [Fact]

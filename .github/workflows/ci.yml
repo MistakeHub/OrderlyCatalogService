@@ -1,0 +1,82 @@
+name: CI
+
+
+on:
+  push:
+    branches: [ master, feature/**]
+  pull_request:
+    branches: [ master, feature/**]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    services:
+   
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: testdb
+        ports:
+          - 5432:5432
+       
+        options: >-
+          --health-cmd "pg_isready -U postgres -d testdb"
+          --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET 9 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: nuget-${{ runner.os }}-$(echo ${{ hashFiles('**/*.csproj') }})
+          restore-keys: |
+            nuget-${{ runner.os }}-
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --no-restore -c Release
+
+      - name: Run unit tests
+        run: dotnet test Orderly.Catalog.Application.Tests/Orderly.Catalog.Application.Tests.csproj --no-build -c Release --logger "trx;LogFileName=unit-tests.trx"
+
+      - name: Run integration tests
+        env:
+          CI: "true"
+          ConnectionStrings__CatalogDb: "Host=localhost;Port=5432;Database=testdb;Username=postgres;Password=postgres"
+        run: |
+          
+          for i in {1..30}; do pg_isready -h localhost -p 5432 -U postgres && break || sleep 1; done
+          dotnet test Orderly.Catalog.IntegrationTests/Orderly.Catalog.IntegrationTests.csproj --no-build -c Release --logger "trx;LogFileName=integration-tests.trx"
+
+      - name: Upload test results (unit)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-results
+          path: Orderly.Catalog.Application.Tests/TestResults
+
+      - name: Upload test results (integration)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: integration-test-results
+          path: Orderly.Catalog.IntegrationTests/TestResults
+
+      - name: Publish code coverage (optional)
+        if: false
+        run: |
+          echo "Enable coverage steps here (coverlet/reportgenerator) if needed"
