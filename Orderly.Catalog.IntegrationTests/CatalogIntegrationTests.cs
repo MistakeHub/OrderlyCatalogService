@@ -116,8 +116,11 @@ namespace Orderly.Catalog.IntegrationTests
         {
             _client?.Dispose();
             _factory?.Dispose();
-            await _postgresContainer.StopAsync();
-            await _postgresContainer.DisposeAsync();
+            if (_postgresContainer != null)
+            {
+                await _postgresContainer.StopAsync();
+                await _postgresContainer.DisposeAsync();
+            }
         }
 
         [Fact]
