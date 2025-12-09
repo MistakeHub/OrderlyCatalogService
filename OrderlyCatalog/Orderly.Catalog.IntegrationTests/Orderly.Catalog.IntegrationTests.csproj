@@ -12,8 +12,8 @@
 
 	<Target Name="CopyAppDeps" AfterTargets="Build">
 	<ItemGroup>
-		<AppDeps Include="$(SolutionDir)Orderly.Catalog\bin\$(Configuration)\net9.0\Orderly.Catalog.deps.json" />
-		<AppRuntime Include="$(SolutionDir)Orderly.Catalog\bin\$(Configuration)\net9.0\Orderly.Catalog.runtimeconfig.json" />
+		<AppDeps Include="$(SolutionDir)OrderlyCatalog\Orderly.Catalog\bin\$(Configuration)\net9.0\Orderly.Catalog.deps.json" />
+		<AppRuntime Include="$(SolutionDir)OrderlyCatalog\Orderly.Catalog\bin\$(Configuration)\net9.0\Orderly.Catalog.runtimeconfig.json" />
 	</ItemGroup>
 	<Copy SourceFiles="@(AppDeps)" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
 	<Copy SourceFiles="@(AppRuntime)" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
