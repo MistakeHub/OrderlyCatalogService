@@ -51,7 +51,7 @@ jobs:
         run: dotnet build --no-restore -c Release
 
       - name: Run unit tests
-        run: dotnet test Orderly.Catalog.Application.Tests/Orderly.Catalog.Application.Tests.csproj --no-build -c Release --logger "trx;LogFileName=unit-tests.trx"
+        run: dotnet test OrderlyCatalog/Orderly.Catalog.Application.Tests/Orderly.Catalog.Application.Tests.csproj --no-build -c Release --logger "trx;LogFileName=unit-tests.trx"
 
       - name: Run integration tests
         env:
@@ -60,21 +60,21 @@ jobs:
         run: |
           
           for i in {1..30}; do pg_isready -h localhost -p 5432 -U postgres && break || sleep 1; done
-          dotnet test Orderly.Catalog.IntegrationTests/Orderly.Catalog.IntegrationTests.csproj --no-build -c Release --logger "trx;LogFileName=integration-tests.trx"
+          dotnet test OrderlyCatalog/Orderly.Catalog.IntegrationTests/Orderly.Catalog.IntegrationTests.csproj --no-build -c Release --logger "trx;LogFileName=integration-tests.trx"
 
       - name: Upload test results (unit)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: unit-test-results
-          path: Orderly.Catalog.Application.Tests/TestResults
+          path: OrderlyCatalog/Orderly.Catalog.Application.Tests/TestResults
 
       - name: Upload test results (integration)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: integration-test-results
-          path: Orderly.Catalog.IntegrationTests/TestResults
+          path: OrderlyCatalog/Orderly.Catalog.IntegrationTests/TestResults
 
       - name: Publish code coverage (optional)
         if: false
