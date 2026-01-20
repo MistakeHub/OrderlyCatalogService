@@ -1,0 +1,26 @@
+[2026-01-14 12:19:47 ERR] An error occurred using the connection to database '' on server ''.
+[2026-01-14 12:20:59 ERR] An error occurred using the connection to database '' on server ''.
+[2026-01-14 12:22:27 ERR] An error occurred using the connection to database '' on server ''.
+[2026-01-14 12:30:32 ERR] An error occurred using the connection to database '' on server ''.
+[2026-01-14 12:38:28 ERR] An error occurred using the connection to database '' on server ''.
+[2026-01-14 12:40:31 ERR] An error occurred using the connection to database '' on server ''.
+[2026-01-14 12:46:55 ERR] An error occurred using the connection to database '' on server ''.
+[2026-01-14 12:47:49 ERR] An error occurred using the connection to database '' on server ''.
+[2026-01-14 12:49:13 ERR] An error occurred using the connection to database '' on server ''.
+[2026-01-14 12:51:01 ERR] An error occurred using the connection to database '' on server ''.
+[2026-01-14 12:51:47 ERR] An error occurred using the connection to database '' on server ''.
+[2026-01-14 12:52:20 ERR] An error occurred using the connection to database '' on server ''.
+[2026-01-14 12:53:36 ERR] An error occurred using the connection to database 'orderly_orders' on server 'tcp://orders-db:5432'.
+[2026-01-14 12:53:39 ERR] An error occurred using the connection to database 'orderly_orders' on server 'tcp://orders-db:5432'.
+[2026-01-14 12:53:44 ERR] An error occurred using the connection to database 'orderly_orders' on server 'tcp://orders-db:5432'.
+[2026-01-14 12:53:47 ERR] An error occurred using the connection to database 'orderly_orders' on server 'tcp://orders-db:5432'.
+[2026-01-14 12:53:50 ERR] An error occurred using the connection to database 'orderly_orders' on server 'tcp://orders-db:5432'.
+[2026-01-14 12:53:53 ERR] An error occurred using the connection to database 'orderly_orders' on server 'tcp://orders-db:5432'.
+[2026-01-14 12:53:56 ERR] An error occurred using the connection to database 'orderly_orders' on server 'tcp://orders-db:5432'.
+[2026-01-14 12:53:59 ERR] An error occurred using the connection to database 'orderly_orders' on server 'tcp://orders-db:5432'.
+[2026-01-14 12:55:15 ERR] Failed executing DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-01-14 12:55:15 INF] Starting Orderly.Catalog service...
+[2026-01-14 12:55:15 WRN] Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'http://+:8080'.

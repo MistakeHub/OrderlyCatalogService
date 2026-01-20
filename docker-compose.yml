@@ -1,44 +1,63 @@
 version: "3.8"
 
 services:
-  catalog:
+  catalog-api:
     build:
-      context: .
-      dockerfile: Orderly.Catalog/Dockerfile  
+      context: ./OrderlyCatalog
+      dockerfile: Orderly.Catalog/Dockerfile
     container_name: orderly_catalog
     ports:
       - "8080:8080"
     environment:
-      - ASPNETCORE_URLS=http://+:8080
-      - ConnectionStrings__CatalogDb=${CATALOG_DB_CONN}
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__CatalogDb: ${CATALOG_DB_CONN}
     volumes:
-      - ./logs:/app/logs
+      - ./logs/catalog:/app/logs
     depends_on:
-      - db
+      - catalog-db
 
-  swagger-ui:
-    image: swaggerapi/swagger-ui:latest
-    container_name: orderly_swagger
-    ports:
-      - "8081:8080" 
-    environment:
-      - SWAGGER_JSON_URL=http://localhost:8080/swagger/v1/swagger.json
-    depends_on:
-      - catalog
-      - db
-
-  db:
+  catalog-db:
     image: postgres:16
-    container_name: orderly.postgres
-    restart: unless-stopped
+    container_name: orderly_catalog_db
     environment:
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=${POSTGRES_DB}
+      POSTGRES_USER: ${CATALOG_DB_USER}
+      POSTGRES_PASSWORD: ${CATALOG_DB_PASSWORD}
+      POSTGRES_DB: ${CATALOG_DB}
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - catalog_pgdata:/var/lib/postgresql/data
+
+  orders-api:
+    build:
+      context: ./OrderlyOrders
+      dockerfile: Orderly.Orders/Dockerfile
+    container_name: orderly_orders
+    ports:
+      - "8082:8080"
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__OrdersDb: ${ORDERS_DB_CONN}
+      Catalog__BaseUrl: http://catalog-api:8080
+    volumes:
+      - ./logs/orders:/app/logs
+    depends_on:
+      - orders-db
+      - catalog-api
+
+  orders-db:
+    image: postgres:16
+    container_name: orderly_orders_db
+    environment:
+      POSTGRES_USER: ${ORDERS_DB_USER}
+      POSTGRES_PASSWORD: ${ORDERS_DB_PASSWORD}
+      POSTGRES_DB: ${ORDERS_DB}
+    ports:
+      - "5433:5432"
+    volumes:
+      - orders_pgdata:/var/lib/postgresql/data
+
 
 volumes:
-  pgdata:
+  catalog_pgdata:
+  orders_pgdata:
