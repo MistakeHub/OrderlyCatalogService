@@ -1,0 +1,659 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB3BD24-5463-431C-B1DB-0A51CA8804B8}|Orderly.Orders.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB3BD24-5463-431C-B1DB-0A51CA8804B8}|Orderly.Orders.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{770766BA-101C-4F9A-807F-F63010F1C78F}|..\\Orderly.Orders.Infrastructure\\Orderly.Orders.Infrastructure.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.infrastructure\\orderly.orders.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FAC14E6-51A6-4E9E-B6A1-AD939EC0A82F}|..\\Orderly.Orders.Domain\\Orderly.Orders.Domain.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FAC14E6-51A6-4E9E-B6A1-AD939EC0A82F}|..\\Orderly.Orders.Domain\\Orderly.Orders.Domain.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.domain\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FAC14E6-51A6-4E9E-B6A1-AD939EC0A82F}|..\\Orderly.Orders.Domain\\Orderly.Orders.Domain.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FAC14E6-51A6-4E9E-B6A1-AD939EC0A82F}|..\\Orderly.Orders.Domain\\Orderly.Orders.Domain.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.domain\\entities\\domainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB3BD24-5463-431C-B1DB-0A51CA8804B8}|Orderly.Orders.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders\\orderly.orders.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2FB3BD24-5463-431C-B1DB-0A51CA8804B8}|Orderly.Orders.csproj|solutionrelative:orderly.orders.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB3BD24-5463-431C-B1DB-0A51CA8804B8}|Orderly.Orders.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders\\middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB3BD24-5463-431C-B1DB-0A51CA8804B8}|Orderly.Orders.csproj|solutionrelative:middlewares\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FAC14E6-51A6-4E9E-B6A1-AD939EC0A82F}|..\\Orderly.Orders.Domain\\Orderly.Orders.Domain.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.domain\\domain events\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\services\\catalogvalidationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\create\\createordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FAC14E6-51A6-4E9E-B6A1-AD939EC0A82F}|..\\Orderly.Orders.Domain\\Orderly.Orders.Domain.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.domain\\interfaces\\icatalogvalidationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\common\\behaviors\\validationbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\common\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FAC14E6-51A6-4E9E-B6A1-AD939EC0A82F}|..\\Orderly.Orders.Domain\\Orderly.Orders.Domain.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.domain\\interfaces\\icatalogclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{770766BA-101C-4F9A-807F-F63010F1C78F}|..\\Orderly.Orders.Infrastructure\\Orderly.Orders.Infrastructure.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.infrastructure\\implements\\cataloghttpclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{770766BA-101C-4F9A-807F-F63010F1C78F}|..\\Orderly.Orders.Infrastructure\\Orderly.Orders.Infrastructure.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.infrastructure\\database\\orderlyorderdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\assemblymarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FB3BD24-5463-431C-B1DB-0A51CA8804B8}|Orderly.Orders.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FB3BD24-5463-431C-B1DB-0A51CA8804B8}|Orderly.Orders.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\cancel\\cancelorder.command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\cancel\\cancelordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\viewmodels\\orderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\viewmodels\\orderitemviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\getall\\getallordersqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FAC14E6-51A6-4E9E-B6A1-AD939EC0A82F}|..\\Orderly.Orders.Domain\\Orderly.Orders.Domain.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.domain\\interfaces\\idomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FAC14E6-51A6-4E9E-B6A1-AD939EC0A82F}|..\\Orderly.Orders.Domain\\Orderly.Orders.Domain.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.domain\\interfaces\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\getbyid\\getbyidordervalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FAC14E6-51A6-4E9E-B6A1-AD939EC0A82F}|..\\Orderly.Orders.Domain\\Orderly.Orders.Domain.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.domain\\dtos\\catalogproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\create\\createordervalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\services\\pricecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1FAC14E6-51A6-4E9E-B6A1-AD939EC0A82F}|..\\Orderly.Orders.Domain\\Orderly.Orders.Domain.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.domain\\interfaces\\ipricecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\update\\updateordercommandvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\update\\updateorder.command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\create\\createorder.command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\cancel\\cancelordervalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\getbyid\\getbyidorder.query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\update\\updateordercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\getbyid\\getbyidorderqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{770766BA-101C-4F9A-807F-F63010F1C78F}|..\\Orderly.Orders.Infrastructure\\Orderly.Orders.Infrastructure.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.infrastructure\\implements\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\order\\getall\\getallorders.query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F3E6CE1-4A28-4314-AC1E-DA872AAAF9C1}|..\\Orderly.Orders.Application\\Orderly.Orders.Application.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.application\\commandsandqueries\\viewmodels\\orderlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{770766BA-101C-4F9A-807F-F63010F1C78F}|..\\Orderly.Orders.Infrastructure\\Orderly.Orders.Infrastructure.csproj|e:\\program files\\source\\orderly\\orderlyorders\\orderly.orders.infrastructure\\migrations\\20260113110819_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "20260113110819_InitialCreate.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Infrastructure\\Migrations\\20260113110819_InitialCreate.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Infrastructure\\Migrations\\20260113110819_InitialCreate.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Infrastructure\\Migrations\\20260113110819_InitialCreate.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Infrastructure\\Migrations\\20260113110819_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T11:08:20.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Domain\\Entities\\BaseEntity.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Domain\\Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-13T10:56:01.246Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAkwFcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T15:05:41.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateOrderCommandHandler.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Create\\CreateOrderCommandHandler.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Create\\CreateOrderCommandHandler.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Create\\CreateOrderCommandHandler.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Create\\CreateOrderCommandHandler.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwBoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T12:11:10.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Order.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Domain Events\\Order.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Domain\\Domain Events\\Order.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Domain Events\\Order.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Domain\\Domain Events\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T13:55:44.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Order.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Domain\\Entities\\Order.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Entities\\Order.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Domain\\Entities\\Order.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAA8wAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T10:40:40.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Orderly.Orders.csproj",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders\\Orderly.Orders.csproj",
+              "RelativeDocumentMoniker": "Orderly.Orders.csproj",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders\\Orderly.Orders.csproj",
+              "RelativeToolTip": "Orderly.Orders.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-25T15:09:28.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ValidationBehavior.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\Common\\Behaviors\\ValidationBehavior.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAkwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T08:17:00.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Entities\\OrderItem.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Domain\\Entities\\OrderItem.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Entities\\OrderItem.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Domain\\Entities\\OrderItem.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T10:43:10.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Orderly.Orders.Infrastructure.csproj",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Infrastructure\\Orderly.Orders.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Infrastructure\\Orderly.Orders.Infrastructure.csproj",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Infrastructure\\Orderly.Orders.Infrastructure.csproj",
+              "RelativeToolTip": "..\\Orderly.Orders.Infrastructure\\Orderly.Orders.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-16T13:06:14.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CatalogValidationService.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\Services\\CatalogValidationService.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\Services\\CatalogValidationService.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\Services\\CatalogValidationService.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\Services\\CatalogValidationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBQAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T14:26:13.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ICatalogValidationService.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Interfaces\\ICatalogValidationService.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Domain\\Interfaces\\ICatalogValidationService.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Interfaces\\ICatalogValidationService.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Domain\\Interfaces\\ICatalogValidationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T14:26:34.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DomainEvent.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Entities\\DomainEvent.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Domain\\Entities\\DomainEvent.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Entities\\DomainEvent.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Domain\\Entities\\DomainEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T14:02:47.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "Middlewares\\ExceptionMiddleware.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders\\Middlewares\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "Middlewares\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:57:56.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\Common\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\Common\\Mappings\\MappingProfile.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\Common\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\Common\\Mappings\\MappingProfile.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T08:28:34.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ICatalogClient.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Interfaces\\ICatalogClient.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Domain\\Interfaces\\ICatalogClient.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Interfaces\\ICatalogClient.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Domain\\Interfaces\\ICatalogClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T11:27:39.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CatalogHttpClient.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Infrastructure\\Implements\\CatalogHttpClient.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Infrastructure\\Implements\\CatalogHttpClient.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Infrastructure\\Implements\\CatalogHttpClient.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Infrastructure\\Implements\\CatalogHttpClient.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswBQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T11:34:14.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AssemblyMarker.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\AssemblyMarker.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\AssemblyMarker.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\AssemblyMarker.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\AssemblyMarker.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T12:55:32.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwBwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T15:06:38.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CancelOrderCommandHandler.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Cancel\\CancelOrderCommandHandler.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Cancel\\CancelOrderCommandHandler.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Cancel\\CancelOrderCommandHandler.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Cancel\\CancelOrderCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T12:30:09.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CancelOrder.Command.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Cancel\\CancelOrder.Command.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Cancel\\CancelOrder.Command.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Cancel\\CancelOrder.Command.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Cancel\\CancelOrder.Command.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T12:29:19.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "OrderItemViewModel.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\ViewModels\\OrderItemViewModel.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\ViewModels\\OrderItemViewModel.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\ViewModels\\OrderItemViewModel.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\ViewModels\\OrderItemViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T11:24:49.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "OrderlyOrderDbContext.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Infrastructure\\Database\\OrderlyOrderDbContext.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Infrastructure\\Database\\OrderlyOrderDbContext.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Infrastructure\\Database\\OrderlyOrderDbContext.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Infrastructure\\Database\\OrderlyOrderDbContext.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAswCIAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T13:04:08.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "OrderViewModel.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\ViewModels\\OrderViewModel.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\ViewModels\\OrderViewModel.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\ViewModels\\OrderViewModel.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\ViewModels\\OrderViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T11:23:12.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "GetAllOrdersQueryHandler.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetAll\\GetAllOrdersQueryHandler.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetAll\\GetAllOrdersQueryHandler.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetAll\\GetAllOrdersQueryHandler.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetAll\\GetAllOrdersQueryHandler.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAYwA4AAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T08:23:20.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GetByIdOrderValidation.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetById\\GetByIdOrderValidation.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetById\\GetByIdOrderValidation.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetById\\GetByIdOrderValidation.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetById\\GetByIdOrderValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T14:10:23.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CatalogProductDto.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\DTOs\\CatalogProductDto.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Domain\\DTOs\\CatalogProductDto.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\DTOs\\CatalogProductDto.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Domain\\DTOs\\CatalogProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T11:29:41.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Interfaces\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Domain\\Interfaces\\IOrderRepository.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Interfaces\\IOrderRepository.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Domain\\Interfaces\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T11:09:27.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IDomainEvent.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Interfaces\\IDomainEvent.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Domain\\Interfaces\\IDomainEvent.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Interfaces\\IDomainEvent.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Domain\\Interfaces\\IDomainEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T13:59:56.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CreateOrderValidation.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Create\\CreateOrderValidation.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Create\\CreateOrderValidation.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Create\\CreateOrderValidation.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Create\\CreateOrderValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T08:06:48.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PriceCalculator.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\Services\\PriceCalculator.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\Services\\PriceCalculator.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\Services\\PriceCalculator.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\Services\\PriceCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T14:22:04.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IPriceCalculator.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Interfaces\\IPriceCalculator.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Domain\\Interfaces\\IPriceCalculator.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Domain\\Interfaces\\IPriceCalculator.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Domain\\Interfaces\\IPriceCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T14:20:09.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UpdateOrderCommandValidation.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Update\\UpdateOrderCommandValidation.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Update\\UpdateOrderCommandValidation.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Update\\UpdateOrderCommandValidation.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Update\\UpdateOrderCommandValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T14:15:41.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UpdateOrder.Command.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Update\\UpdateOrder.Command.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Update\\UpdateOrder.Command.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Update\\UpdateOrder.Command.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Update\\UpdateOrder.Command.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T14:03:04.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CancelOrderValidation.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Cancel\\CancelOrderValidation.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Cancel\\CancelOrderValidation.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Cancel\\CancelOrderValidation.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Cancel\\CancelOrderValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T08:14:24.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CreateOrder.Command.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Create\\CreateOrder.Command.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Create\\CreateOrder.Command.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Create\\CreateOrder.Command.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Create\\CreateOrder.Command.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T11:47:58.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "GetByIdOrder.Query.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetById\\GetByIdOrder.Query.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetById\\GetByIdOrder.Query.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetById\\GetByIdOrder.Query.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetById\\GetByIdOrder.Query.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T11:22:47.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UpdateOrderCommandHandler.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Update\\UpdateOrderCommandHandler.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Update\\UpdateOrderCommandHandler.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Update\\UpdateOrderCommandHandler.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\Update\\UpdateOrderCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBZwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T14:05:16.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Infrastructure\\Implements\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Infrastructure\\Implements\\OrderRepository.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Infrastructure\\Implements\\OrderRepository.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Infrastructure\\Implements\\OrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T11:18:28.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "GetByIdOrderQueryHandler.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetById\\GetByIdOrderQueryHandler.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetById\\GetByIdOrderQueryHandler.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetById\\GetByIdOrderQueryHandler.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetById\\GetByIdOrderQueryHandler.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAD4vxEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-22T11:26:25.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "GetAllOrders.Query.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetAll\\GetAllOrders.Query.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetAll\\GetAllOrders.Query.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetAll\\GetAllOrders.Query.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\Order\\GetAll\\GetAllOrders.Query.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T08:22:00.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "OrderListViewModel.cs",
+              "DocumentMoniker": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\ViewModels\\OrderListViewModel.cs",
+              "RelativeDocumentMoniker": "..\\Orderly.Orders.Application\\CommandsAndQueries\\ViewModels\\OrderListViewModel.cs",
+              "ToolTip": "E:\\Program files\\source\\Orderly\\OrderlyOrders\\Orderly.Orders.Application\\CommandsAndQueries\\ViewModels\\OrderListViewModel.cs",
+              "RelativeToolTip": "..\\Orderly.Orders.Application\\CommandsAndQueries\\ViewModels\\OrderListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T08:25:41.338Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

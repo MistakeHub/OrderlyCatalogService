@@ -91,7 +91,7 @@ public partial class Program {
         app.UseCors("AllowSwaggerUi");
 
         app.UseSwagger();
-
+        app.UseSwaggerUI();
         app.MapOpenApi();
         app.UseHttpsRedirection();
 
