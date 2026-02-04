@@ -3,6 +3,7 @@ using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Orderly.Orders.Application.Common.Behaviors;
+using Orderly.Orders.Application.Common.DomainEvent;
 using Orderly.Orders.Application.Common.Mappings;
 using Orderly.Orders.Application.Services;
 using Orderly.Orders.Domain.Entities;
@@ -66,10 +67,15 @@ builder.Services.AddHttpClient<ICatalogClient, CatalogHttpClient>(client =>
 
     client.Timeout = TimeSpan.FromSeconds(10);
 });
+builder.Services.AddSingleton<RabbitMqOptions>(new RabbitMqOptions() { Exchange = builder.Configuration["RabbitMq:Exchange"] });
 
 builder.Services.AddScoped<ICatalogValidationService, CatalogValidationService>();
 
-builder.Services.AddScoped<IDomainEvent, DomainEvent>();
+builder.Services.AddScoped<IRabbitMqConnectionProvider, RabbitMqConnectionProvider>();
+
+builder.Services.AddScoped<IMessageBrokerPublishService, RabbitMQPublisher>();
+
+builder.Services.AddScoped<IDomainEventDispatcher, DomainEventDispatcher>();
 
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 

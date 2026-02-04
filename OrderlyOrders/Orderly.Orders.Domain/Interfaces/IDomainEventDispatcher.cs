@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Orderly.Orders.Domain.Interfaces
 {
-    public interface IDomainEvent
+    public interface IDomainEventDispatcher
     {
-        DateTime OccuredTime { get; set; }
-        public string GetRoutingKey();
+        public Task DispatchAsync(IEnumerable<IDomainEvent> domainEvents);
     }
 }

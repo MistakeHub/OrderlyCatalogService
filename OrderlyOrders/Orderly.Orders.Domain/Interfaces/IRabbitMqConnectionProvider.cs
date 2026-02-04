@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RabbitMQ.Client;
 
 namespace Orderly.Orders.Domain.Interfaces
 {
-    public interface IDomainEvent
+    public interface IRabbitMqConnectionProvider
     {
-        DateTime OccuredTime { get; set; }
-        public string GetRoutingKey();
+        Task<IConnection> GetConnectionAsync();
     }
 }
