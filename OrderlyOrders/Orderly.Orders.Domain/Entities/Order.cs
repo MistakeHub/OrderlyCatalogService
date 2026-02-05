@@ -68,6 +68,10 @@ namespace Orderly.Orders.Domain.Entities
         }
 
         private void AddEvent(IDomainEvent e)=> _events.Add(e);
+        public void ClearDomainEvents()
+        {
+            _events.Clear();
+        }
     }
 
     public enum OrderStatus:int

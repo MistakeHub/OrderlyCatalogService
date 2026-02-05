@@ -13,17 +13,19 @@ namespace Orderly.Orders.Infrastructure.Implements
     public class OrderRepository:IOrderRepository
     {
         private OrderlyOrderDbContext _context;
+        private IDomainEventDispatcher _domainEventDispatcher;
 
-        public OrderRepository(OrderlyOrderDbContext context)
+        public OrderRepository(OrderlyOrderDbContext context, IDomainEventDispatcher domainEventDispatcher)
         {
             _context = context;
+            _domainEventDispatcher = domainEventDispatcher;
         }
 
         public async Task<int> AddAsync(Order order)
         {
             var neworder = await  _context.Orders.AddAsync(order);
             
-            await _context.SaveChangesAsync();
+            await SaveChangesAsync();
 
             return neworder.Entity.Id;
         }
@@ -42,7 +44,28 @@ namespace Orderly.Orders.Infrastructure.Implements
         {
             _context.Orders.Update(order);
 
-            await _context.SaveChangesAsync();
+            await SaveChangesAsync();
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            var entities = _context
+           .ChangeTracker
+           .Entries<Order>()
+           .Select(e => e.Entity)
+           .ToList();
+
+            var events = entities
+                .SelectMany(e => e.DomainEvents)
+                .ToList();
+
+            await _domainEventDispatcher.DispatchAsync(events);
+
+            foreach (var entity in entities)
+            {
+                entity.ClearDomainEvents();
+            }
+
         }
     }
 }

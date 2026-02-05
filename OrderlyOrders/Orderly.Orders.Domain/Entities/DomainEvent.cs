@@ -7,8 +7,10 @@ using Orderly.Orders.Domain.Interfaces;
 
 namespace Orderly.Orders.Domain.Entities
 {
-    public record DomainEvent : IDomainEvent
+    public abstract record DomainEvent : IDomainEvent
     {
         public DateTime OccuredTime { get; set; } = DateTime.Now;
+
+        public abstract string GetRoutingKey();
     }
 }
