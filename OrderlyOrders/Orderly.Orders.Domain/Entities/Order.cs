@@ -30,6 +30,21 @@ namespace Orderly.Orders.Domain.Entities
 
         public static Order Create(int customerId, List<OrderItem> items, decimal total)
         {
+            if(items == null || items.Count == 0)
+            {
+                throw new InvalidOperationException("Cannot create order without a single item.");
+            }
+
+            if(items.Any(x=> x.Quantity == 0))
+            {
+                throw new InvalidOperationException("Cannot create order where items quantity is equal 0.");
+            }
+
+            if (items.Any(x => x.UnitPrice == 0))
+            {
+                throw new InvalidOperationException("Cannot create order where items unitPrice is equal 0.");
+            }
+
             var order = new Order
             {
                 CustomerId = customerId,
@@ -48,6 +63,11 @@ namespace Orderly.Orders.Domain.Entities
             if(Status != OrderStatus.Pending)
             {
                 throw new InvalidOperationException("Cannot pay order in this state.");
+            }
+
+            if(Status == OrderStatus.Paid)
+            {
+                throw new InvalidOperationException("Order is already paid.");
             }
 
             Status = OrderStatus.Paid;
