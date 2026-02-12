@@ -56,7 +56,7 @@ jobs:
       - name: Run OrderlyOrders application layer unit tests unit tests
         run: dotnet test OrderlyOrders/Orderly.Orders.Application.Tests/Orderly.Orders.Application.Tests.csproj --no-build -c Release --logger "trx;LogFileName=unit-tests.trx"
         
-      - name: Run OrderlyOrders application layer unit tests unit tests
+      - name: Run OrderlyOrders domain layer unit tests unit tests
         run: dotnet test OrderlyOrders/Orderly.Orders.Domain.Tests/Orderly.Orders.Domain.Tests.csproj --no-build -c Release --logger "trx;LogFileName=unit-tests.trx"
 
       - name: Run integration tests
