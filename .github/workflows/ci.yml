@@ -50,8 +50,14 @@ jobs:
       - name: Build
         run: dotnet build --no-restore -c Release
 
-      - name: Run unit tests
+      - name: Run OrderlyCatalog application layer unit tests
         run: dotnet test OrderlyCatalog/Orderly.Catalog.Application.Tests/Orderly.Catalog.Application.Tests.csproj --no-build -c Release --logger "trx;LogFileName=unit-tests.trx"
+        
+      - name: Run OrderlyOrders application layer unit tests unit tests
+        run: dotnet test OrderlyOrders/Orderly.Orders.Application.Tests/Orderly.Orders.Application.Tests.csproj --no-build -c Release --logger "trx;LogFileName=unit-tests.trx"
+        
+      - name: Run OrderlyOrders application layer unit tests unit tests
+        run: dotnet test OrderlyOrders/Orderly.Domain.Application.Tests/Orderly.Orders.Domain.Tests.csproj --no-build -c Release --logger "trx;LogFileName=unit-tests.trx"
 
       - name: Run integration tests
         env:
