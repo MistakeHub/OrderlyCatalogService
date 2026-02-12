@@ -9,7 +9,7 @@ using Orderly.Orders.Domain.Interfaces;
 
 namespace Orderly.Orders.Application.CommandsAndQueries.Order.Create
 {
-    internal class CreateOrderCommandHandler : IRequestHandler<CreateOrder, int>
+    public class CreateOrderCommandHandler : IRequestHandler<CreateOrder, int>
     {
         private readonly ICatalogValidationService _catalogService;
         private readonly IOrderRepository _orderRepository;

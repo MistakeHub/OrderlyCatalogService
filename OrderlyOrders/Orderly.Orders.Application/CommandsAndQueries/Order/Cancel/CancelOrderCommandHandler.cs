@@ -8,22 +8,20 @@ using Orderly.Orders.Domain.Interfaces;
 
 namespace Orderly.Orders.Application.CommandsAndQueries.Order.Cancel
 {
-    internal class CancelOrderCommandHandler : IRequestHandler<CancelOrder>
+    public class CancelOrderCommandHandler : IRequestHandler<CancelOrder>
     {
-        private readonly ICatalogClient _catalogClient;
         private readonly IOrderRepository _orderRepository;
 
-        public CancelOrderCommandHandler(ICatalogClient catalogClient, IOrderRepository orderRepository)
+        public CancelOrderCommandHandler(IOrderRepository orderRepository)
         {
-            _catalogClient = catalogClient;
             _orderRepository = orderRepository;
         }
             
         public async Task Handle(CancelOrder request, CancellationToken cancellationToken)
         {
-            var order = await _orderRepository.GetByIdAsync(request.OrderId) ?? throw new InvalidOperationException($"Order {request.OrderId} not found"); ;
+           var order = await _orderRepository.GetByIdAsync(request.OrderId) ?? throw new InvalidOperationException($"Order {request.OrderId} not found"); ;
 
-            order.Cancel();
+           order.Cancel();
 
            await _orderRepository.UpdateAsync(order);
 
